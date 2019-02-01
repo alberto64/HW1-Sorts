@@ -31,17 +31,19 @@ public class SortsTester {
 
 		for(int idx = 1; idx < mergeList.length; idx++) {
 			assertTrue("This list should be in ascending order", mergeList[idx-1] <= mergeList[idx]);
-		}	}	
+		}	
+	}	
 	
 	@Test
 	public void insertMergeSortTest() {
 		for(int idx = 0; idx < LIST_LENGHT; idx++) {
 			insertMergeList[idx] = rand.nextInt(NUMBER_LIMIT) + 1;
 		}
-		MergeInsertionSort.MergeInsertionSort(insertMergeList);
+		MergeInsertionSort.mergeInsertionSort(insertMergeList, 100);
 
 		for(int idx = 1; idx < insertMergeList.length; idx++) {
 			assertTrue("This list should be in ascending order", insertMergeList[idx-1] <= insertMergeList[idx]);
-		}	}
+		}
+	}
 
 }
